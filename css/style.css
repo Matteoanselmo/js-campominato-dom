@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+footer{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#difficulty{
+    width: 180px;
+}
+#my-play-button{
+    padding: 0 1rem;
+}
+
+#my-container{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checked{
+    background-color: rgb(0, 153, 255);
+    color: white;
+}
+
+.checked-bombs{
+    background-color: rgb(117, 0, 0);
+    color: white;
+}
+
+.box-facile{
+    height: calc(100% / 10);
+    width: calc(100% / 10);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    
+}
+.box-medio{
+    height: calc(100% / 9);
+    width: calc(100% / 9);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    
+}
+
+.box-difficile{
+    height: calc(100% / 7);
+    width: calc(100% / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    
+}
