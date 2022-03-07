@@ -18,14 +18,20 @@ playButton.addEventListener('click' , function(){
 
     const bombsNumber = bombs(16, boxNumber);
     console.log(bombsNumber);
+
+    //contatore punti
+    let points = 0;
     
     for(let i = 0; i < boxNumber; i++){
         const gridBox = document.createElement('div');
-
+        
         gridBox.addEventListener('click' , function(){
             if(bombsNumber.includes(i)){
                 gridBox.classList.add('checked-bombs')
+                writeInElementById('score', `Hai perso il tuo punteggio è: ${points + 1}`);
             }else{
+                writeInElementById('score', `il tuo punteggio è: ${points + 1}`);
+                points++;
                 gridBox.classList.add('checked');
             }
             
@@ -67,4 +73,6 @@ function generateUniqueRandomNumber (numbArray, min ,max){
     return randomInt;
 }
 
-
+function writeInElementById(elementId, string){
+    document.getElementById(elementId).innerHTML = string;
+}
